@@ -92,7 +92,8 @@ def relative_risk(p_test, p_control):
     rr = p_test/p_control
     return rr
 ```
-## Number needed to treat (NNT), inverse of RR
+## Number needed to treat/harm (NNT)
+### Inverse of RR
 ```Python3
 def NNT(p_test, p_control):
     """

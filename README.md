@@ -105,3 +105,19 @@ def NNT(p_test, p_control):
     nnt = 1 / np.abs(p_test - p_control)
     return nnt
 ```
+
+## Odds Ratio (OR)
+### Ratio of occurences/non-occurence between test/control groups
+```Python3
+def OddsRatio(p_test, p_control):
+    """
+    Calculates odds ratio
+    :param p_test: Proportion of positive outcome under test
+    :param p_control: Proportion of positive outcome under control
+    :return odds_ratio: Ratio of odds of occurence/non-occurence for test and control groups 
+    """
+    test_group = p_test/(1-p_test)
+    control_group = p_control/(1-p_control)
+    odds_ratio = test_group/control_group
+    return odds_ratio
+```

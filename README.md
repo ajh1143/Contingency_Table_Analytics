@@ -5,7 +5,7 @@
 """
 Example Contingency Table:
 ---------------------------------
-Outcome        Treatment Groups
+Outcome      Treatment Groups
             Test        Control
 Positive     a             c
 Negative     b             d

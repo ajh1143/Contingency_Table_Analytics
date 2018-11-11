@@ -27,6 +27,7 @@ import matplotlib.pyplot as plt
 ```
 
 ## Proportion of positive outcomes under test condition
+### Used for treatment comparison to control
 ```Python3
 def p_test_subs(t_pos, t_neg):
     """
@@ -40,6 +41,7 @@ def p_test_subs(t_pos, t_neg):
     return p_test
 ```
 ## Proportion of positive outcomes under control condition
+### Used for treatment comparison to control
 ```Python3
 def p_control_subs(c_pos, c_neg):
     """
@@ -65,6 +67,7 @@ def diff_proportions(p_test, p_control):
     return dop
 ```
 ## Absolute risk difference of positive results in test, control groups
+### Used for clinical trials
 ```Python3
 def diff_proportions(p_test, p_control):
     """
@@ -77,6 +80,7 @@ def diff_proportions(p_test, p_control):
     return ard
 ```
 ## Relative Risk
+### Used for prospective studies
 ```Python3
 def relative_risk(p_test, p_control):
     """

@@ -77,3 +77,14 @@ def relative_risk(p_test, p_control):
     """
     rr = p_test/p_control
     return rr
+
+# Number needed to treat/harm
+def NNT(p_test, p_control):
+    """
+    Calculate Number needed to treat/harm (NNT)
+    :param p_test: Proportion of positive outcome under test
+    :param p_control: Proportion of positive outcome under control
+    :return nnt: number needed to treat
+    """
+    nnt = 1 / np.abs(p_test - p_control)
+    return nnt

@@ -1,5 +1,6 @@
 # Contingency Table Analyses
 
+_______________________________________________________________________________________________________________________________________
 ## 2x2 Contingency Table 
 ```Python3
 """
@@ -20,6 +21,7 @@ d = c_neg
 """
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Libraries
 ```Python3
 import pandas as pd
@@ -27,6 +29,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Proportion of positive outcomes under test condition
 ### Used for treatment comparison to control
 ```Python3
@@ -41,6 +44,8 @@ def p_test_subs(t_pos, t_neg):
     p_test = t_pos/total
     return p_test
 ```
+
+_______________________________________________________________________________________________________________________________________
 ## Proportion of positive outcomes under control condition
 ### Used for treatment comparison to control
 ```Python3
@@ -55,6 +60,8 @@ def p_control_subs(c_pos, c_neg):
     p_control = c_pos/total
     return p_control
 ```
+
+_______________________________________________________________________________________________________________________________________
 ## Basic difference of proportions of positive results in test, control groups
 ```Python3
 def diff_proportions(p_test, p_control):
@@ -67,6 +74,8 @@ def diff_proportions(p_test, p_control):
     dop = p_control - p_test
     return dop
 ```
+
+_______________________________________________________________________________________________________________________________________
 ## Absolute risk difference of positive results in test, control groups
 ### Used for clinical trials
 ```Python3
@@ -80,6 +89,8 @@ def diff_proportions(p_test, p_control):
     ard = np.abs(p_control - p_test)
     return ard
 ```
+
+_______________________________________________________________________________________________________________________________________
 ## Relative Risk
 ### Used for prospective studies
 ```Python3
@@ -93,6 +104,8 @@ def relative_risk(p_test, p_control):
     rr = p_test/p_control
     return rr
 ```
+
+_______________________________________________________________________________________________________________________________________
 ## Number needed to treat/harm (NNT)
 ### Inverse of RR
 ```Python3
@@ -107,6 +120,7 @@ def NNT(p_test, p_control):
     return nnt
 ```
 
+_______________________________________________________________________________________________________________________________________
 ## Odds Ratio (OR)
 ### Ratio of occurences/non-occurence between test/control groups
 ```Python3
